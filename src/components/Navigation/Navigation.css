@@ -1,0 +1,35 @@
+.navbar-container {
+    padding-top: 50px;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #2b2c28;
+}
+
+.navbar-sections {
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #7de2d1;
+} 
+        
+a:hover {
+    color: #fffafb;
+}
+
+img {
+    width: 50px;
+}
