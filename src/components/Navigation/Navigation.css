@@ -10,7 +10,7 @@ nav {
     top: 0;
     width: 100%;
     height: 50px;
-    background: #2b2c28;
+    background: var(--primary-black);
 }
 
 .navbar-sections {
@@ -23,11 +23,12 @@ nav {
 
 a {
     text-decoration: none;
-    color: #7de2d1;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
 } 
         
 a:hover {
-    color: #fffafb;
+    color: var(--primary-white);
 }
 
 img {
