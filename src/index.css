@@ -1,6 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -9,23 +13,112 @@
   --primary-color: #7de2d1;
   --secondary-color: #339989;
   --primary-white: #fffafb;
+  --secondary-white: rgba(255,255,255,0.6);
   --primary-black: #2b2c28;
   --secondary-black: #131515;
 
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+
   --primary-font: 'Peralta', cursive, sans-serif;
   --secondary-font: 'Port Lligat Sans', sans-serif;
-  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--primary-font);
+  background: var(--primary-color);
+  color: var(--primary-white);
+  line-height: 1.5;
+}
+/* General Styles */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+
+}
+section > h2, section > h5 {
+  text-align: center;
+}
+section > h5 {
+  color: var(--secondary-white);
+}
+section > h2 {
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+.text-light {
+  color: var(--secondary-white);
+}
+a {
+  color: var(--secondary-color);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--primary-white);
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--secondary-color);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--primary-white);
+  color: var(--primary-black);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--primary-black);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries for medium devices */
+@media screen and (max-width: 1024px) {
+  .container {
+      width: var(--container-width-md);
+  }
+  section {
+      margin-top: 6rem;
+  }
+}
+
+/* Media Queries for small devices */
+@media screen and (max-width: 600px) {
+  .container {
+      width: var(--container-width-sm);
+  }
+  section > h2{
+      margin-bottom: 2rem;
+  }
 }
