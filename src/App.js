@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 // Components
+import Navigation from './components/Navigation/Navigation'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
@@ -12,11 +13,13 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route path="/" element={<Navigation />}>
+          <Route indexelement={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
       </Routes>
     </div>
   );
