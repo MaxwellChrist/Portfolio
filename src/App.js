@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Navigation />}>
-          <Route indexelement={<Home />} />
+        <Route path="/" element={<Navigation />} >
+          <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
