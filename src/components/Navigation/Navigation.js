@@ -5,15 +5,28 @@ const Navbar = styled.div`
     position: fixed;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 0;
     width: 100%;
     height: 50px;
     background: papayawhip;
 
     div {
-        padding-bottom: 50px;
-        color: blue;
+        display: flex;
+        padding: 0 10px;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: green;
+        }   
+
+        h1 {
+            color: blue;
+        }
     }
+
 `;
 
 const Navigation = () => {
