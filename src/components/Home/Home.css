@@ -6,10 +6,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding-top: 100px;
+}
+
+.home-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home-content h1{
+  font-size: 5rem;
+}
+
+.home-content h3{
+  font-size: 2rem;
 }
 
 .buttons-container {
