@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import Logo from '../../assets/images/Logo.png'
+// import { GiHamburgerMenu } from 'react-icons/gi'
+import Logo from '../../assets/images/Logo3.png'
 import './Navigation.css'
 
 const Navigation = () => {
@@ -21,23 +22,23 @@ const Navigation = () => {
                     <span className="loader"></span>
                 </div>
             ) : (
-                <div className='navbar-container'>
+                <header>
                     <nav>
                         <div className='navbar-sections'>
-                            <Link to="/">Home</Link>
-                            <Link to="/about">About</Link>
-                            <Link to="/projects">Projects</Link>
-                            <Link to="/contact">Contact</Link>
+                            <Link id="home" to="/">Home</Link>
+                            <Link id="about" to="/about">About</Link>
+                            <Link id="projects" to="/projects">Projects</Link>
+                            <Link id="contact" to="/contact">Contact</Link>
                         </div>
-                        <div className='navbar-sections'>
+                        <div id="logo" className='navbar-sections'>
                             <Link to="/">
                                 <img src={Logo} alt="Logo" />
                             </Link>
                         </div>
                     </nav>
-                    <Outlet />
-                </div>
+                </header>
             )}
+            <Outlet />
         </div>
     )
 }
