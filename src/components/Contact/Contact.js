@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import './Contact.css';
 import {MdOutlineMail} from 'react-icons/md';
 import {GrLinkedin} from 'react-icons/gr';
+import { GoMarkGithub } from 'react-icons/go'
 import emailjs from '@emailjs/browser';
 
   const Contact = () => {
@@ -27,7 +28,7 @@ import emailjs from '@emailjs/browser';
       }
 
   return (
-    <section id="contact">
+    <section className="contact">
       <h1>Get in touch</h1>
       <p>This website is the start of something great for me and something
          I really enjoyed developing. I'll be making updates to this before
@@ -47,12 +48,17 @@ import emailjs from '@emailjs/browser';
           <article className='contact-option'>
             <MdOutlineMail className='contact-option-icon'/>
             <h4>Email</h4>
-            <a href="mailto:mhchrist22@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
+            <a href="mailto:mhchrist22@gmail.com" className='contact-option-link' target="_blank" rel="noreferrer">Send a message</a>
           </article>
           <article className='contact-option'>
             <GrLinkedin className='contact-option-icon'/>
             <h4>LinkedIn</h4>
-            <a href="https://www.linkedin.com/in/maxwellchrist/" target="_blank" rel="noreferrer" >Go to profile page</a>
+            <a href="https://www.linkedin.com/in/maxwellchrist/" className='contact-option-link' target="_blank" rel="noreferrer">Go to profile page</a>
+          </article>
+          <article className='contact-option'>
+            <GoMarkGithub className='contact-option-icon'/>
+            <h4>Github</h4>
+            <a href="https://github.com/MaxwellChrist" className='contact-option-link' target="_blank" rel="noreferrer">Go to profile page</a>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>

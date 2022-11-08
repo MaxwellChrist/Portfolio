@@ -74,20 +74,17 @@ a:hover {
   background: var(--secondary-color);
   color: var(--primary-black);
 }
-
 img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
-
 /* Media Queries for medium devices */
 @media screen and (max-width: 1024px) {
   .container {
       width: var(--container-width-md);
   }
 }
-
 /* Media Queries for small devices */
 @media screen and (max-width: 600px) {
   .container {
