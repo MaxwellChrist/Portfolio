@@ -29,20 +29,21 @@ import emailjs from '@emailjs/browser';
 
   return (
     <section className="contact">
-      <h1>Get in touch</h1>
-      <p>This website is the start of something great for me and something
-         I really enjoyed developing. I'll be making updates to this before
-         I improve it for something better (I'm looking at you three.js!),
-         but in the meantime, I wanted to get any input from everyone.
-         Want to say some kind words? You're great and let's connect on 
-         LinkedIn! Found a bug in my website and want to show me? Let 
-         those fingers fly in the section below! Anything you want to say 
-         at all will be sent to me through email and I will try to respond
-         as soon as possible. The only guarantee I'll give is that the 
-         follow up email I'll message back with will not be a generic thank 
-         you email. I really appreciate you viewing my website and I'll
-         appreciate you even more if you send me a message below.
-      </p>
+      <div className="contact-intro">
+        <h1>Get In Touch!</h1>
+        <p>Want to say some kind words? I'm sure we'll get along so let's
+          connect on LinkedIn if we're not already! Found a bug in my website and 
+          want to show me? Tell me all about it! Anything you want to say 
+          at all will be sent to me through email and I will try to respond
+          to every comment. The only guarantee I'll give is that the 
+          follow up email I'll message back with will not be a generic thank 
+          you email. I really appreciate you viewing my website and I'll
+          appreciate you even more if you send me a message below.
+        </p>
+        <p>P.S. There's an easter egg on this website and the only way you 
+          can view it is by sending a message below.
+        </p>
+      </div>
       <div className='container contact-container'>
         <div className='contact-options'>
           <article className='contact-option'>
