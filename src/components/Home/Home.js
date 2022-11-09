@@ -3,29 +3,19 @@ import Resume from '../../assets/resume/resume.pdf'
 import {gsap} from 'gsap'
 import {useLayoutEffect, useRef} from 'react'
 
-    // const t1 = gsap.timeline()
-    // gsap.from(['.home-content'], {opacity: 0, duration: 1, y: -50})
-
 const Home = () => {
-
-    const comp = useRef(); // create a ref for the root level element (we'll use it later)
-
+    const comp = useRef();
     useLayoutEffect(() => {
-
         let ctx = gsap.context(() => {
-    
-            // all our animations can use selector text like ".box" 
-            // and it's properly scoped to our component
-            gsap.from(['h1', 'h3'], {opacity: 0, duration: 3, y: -200})
-            gsap.from(['a'], {opacity: 0, duration: 3, y: 200})
-            
-          }, comp); // <- IMPORTANT! Scopes selector text
-          
+            gsap.from(['.home-content'], {opacity: 0, duration: 3, y: 200, stagger: 0.6})
+            gsap.from(['h1'], {opacity: 0, duration: 1, y: 250})
+            gsap.from(['h3'], {opacity: 0, duration: 1, y: -250, delay: 1})
+            gsap.from(['.buttons-container'], {opacity: 0, duration: 1, y: 200, delay: 2})
+
+          }, comp); 
           return () => ctx.revert();
     
     }, []);
-
-
     return (
         <section className="home-container" ref={comp}>
             <div className='home-content'>
