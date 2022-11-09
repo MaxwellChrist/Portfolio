@@ -1,0 +1,10 @@
+.letter-animation {
+    font-size: 4rem;
+    display: inline-block;
+    transform: translateY(calc(-100vh - 1rem));
+    transition: transform 2s;
+}
+
+.letter-animation-7 {
+    padding-right: 1rem;
+}
