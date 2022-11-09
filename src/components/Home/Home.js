@@ -1,16 +1,20 @@
 import "./Home.css"
 import Resume from '../../assets/resume/resume.pdf'
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 import {useLayoutEffect, useRef} from 'react'
 
 const Home = () => {
     const comp = useRef();
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.from(['.home-content'], {opacity: 0, duration: 3, y: 200, stagger: 0.6})
-            gsap.from(['h1'], {opacity: 0, duration: 1, y: 250})
-            gsap.from(['h3'], {opacity: 0, duration: 1, y: -250, delay: 1})
-            gsap.from(['.buttons-container'], {opacity: 0, duration: 1, y: 200, delay: 2})
+            gsap.from(['.home-content'], {opacity: 1, scaleY: 1, stagger: 5})
+            // gsap.from(['h1', 'h3', '.buttons-container' ], {opacity: 0, scaleY: 0, duration: 1, y: -50 })
+            gsap.from(['h1'], {opacity: 0, scaleY: 0, duration: 1, delay: 1 })
+            gsap.from(['h3'], {opacity: 0, scaleY: 0, duration: 1, delay: 2 })
+            gsap.from(['.buttons-container'], {opacity: 0, scaleY: 0, duration: 1, delay: 3 })
+            
+            // gsap.to(['.home-content'], {opacity: 1, scaleY: 1, duration: 1 } );
+            gsap.to(['h1', 'h3', '.buttons-container' ], {opacity: 1, scaleY: 1, duration: 1 })
 
           }, comp); 
           return () => ctx.revert();
