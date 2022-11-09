@@ -30,7 +30,7 @@ const Navigation = () => {
                             <Link id="projects" to="/projects">Projects</Link>
                             <Link id="contact" to="/contact">Contact</Link>
                         </div>
-                        <div id="logo" className='navbar-sections'>
+                        <div className='logo navbar-sections'>
                             <Link to="/">
                                 <img src={Logo} alt="Logo" />
                             </Link>

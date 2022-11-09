@@ -1,11 +1,12 @@
 .home-container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/images/Main.jpg");
+  background-image: url("../../assets/images/Home.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: scroll;
 }
 
 .home-content {
