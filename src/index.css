@@ -82,7 +82,7 @@ a:hover {
   }
 }
 /* Media Queries for small devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .container {
       width: var(--container-width-sm);
   }
