@@ -27,7 +27,7 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     height: 100%;
-    transition: var(--transition)
+    transition: var(--transition);
 }
 
 .projects-item:hover {
@@ -82,11 +82,18 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
     }
+
+    .projects-item h3 {
+        font-size: 1.75rem;
+    }
 }
 /* Media Queries for small devices */
 @media screen and (max-width: 600px) {
     .projects-container {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    .projects-item h3 {
+        font-size: 1.5rem;
     }
 }
