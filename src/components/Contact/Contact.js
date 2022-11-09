@@ -44,7 +44,7 @@ import emailjs from '@emailjs/browser';
           can view it is by sending a message below.
         </p>
       </div>
-      <div className='container contact-container'>
+      <div className='contact-container'>
         <div className='contact-options'>
           <article className='contact-option'>
             <MdOutlineMail className='contact-option-icon'/>

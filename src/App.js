@@ -1,4 +1,3 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 // Components
@@ -11,7 +10,7 @@ import NoMatch from './components/NoMatch/NoMatch'
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route path="/" element={<Navigation />} >
           <Route index element={<Home />} />
@@ -21,7 +20,7 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

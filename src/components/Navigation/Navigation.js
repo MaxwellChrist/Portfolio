@@ -6,7 +6,7 @@ import './Navigation.css'
 const Navigation = () => {
 
     return (
-        <div className="main-container">
+        <div className="app">
             <header>
                 <nav>
                     <div className='navbar-sections'>

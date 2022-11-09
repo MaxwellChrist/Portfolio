@@ -16,7 +16,8 @@ const Home = () => {
     
             // all our animations can use selector text like ".box" 
             // and it's properly scoped to our component
-            gsap.from(['h1', 'h3'], {opacity: 0, duration: 2, y: -200})
+            gsap.from(['h1', 'h3'], {opacity: 0, duration: 3, y: -200})
+            gsap.from(['a'], {opacity: 0, duration: 3, y: 200})
             
           }, comp); // <- IMPORTANT! Scopes selector text
           
@@ -26,8 +27,8 @@ const Home = () => {
 
 
     return (
-        <section className="home-container">
-            <div className='home-content' ref={comp}>
+        <section className="home-container" ref={comp}>
+            <div className='home-content'>
                 <h1>Maxwell Christ</h1>
                 <h3>Full Stack Web Developer</h3>
                 <div className="buttons-container">
