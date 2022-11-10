@@ -22,10 +22,6 @@
   text-align: center;
 }
 
-.home-content h3{
-  font-size: 2.5rem;
-}
-
 .buttons-container {
   margin-top: 2rem;
   display: flex;
@@ -40,16 +36,13 @@
 
 /* Media Queries for medium devices */
 @media screen and (max-width: 1024px) {
-  .home-content h3{
-    font-size: 1.75rem;
+  .home-content{
+    width: 90%;
   }
 } 
 /* Media Queries for small devices */
 @media screen and (max-width: 650px) {
   .home-content{
-    width: 90%;
-  }
-  .home-content h3{
-    font-size: 1.25rem;
+    width: 95%;
   }
 }
