@@ -2,7 +2,7 @@ import './AnimateName.css'
 import { gsap } from 'gsap'
 import {useLayoutEffect, useRef} from 'react'
 
-const AnimatedName = ({ strArray, index }) => {
+const AnimatedName = ({ firstName, lastName }) => {
 
     const ref = useRef();
     useLayoutEffect(() => {
@@ -15,9 +15,14 @@ const AnimatedName = ({ strArray, index }) => {
 
   return (
     <div className="name-animation-container" ref={ref}>
-      {strArray.map((letter, index) => (
-        <span key={index} className={`letter-animation letter-animation-${index}`}>
-          {letter === " " ? letter : letter }
+      {firstName.map((letter, index) => (
+        <span key={index} className={`firstname-animation letter-animation LA-${index}`}>
+          {letter}
+        </span>
+      ))}
+      {lastName.map((letter, index) => (
+        <span key={index} className={`lastname-animation letter-animation LA-${index}`}>
+          {letter}
         </span>
       ))}
     </div>
