@@ -23,15 +23,13 @@
 }
 
 .buttons-container {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  margin: 2rem auto 0;
 }
 
 .buttons-container a{
   background: var(--primary-color);
   color: var(--secondary-black);
+  font-size: 2rem;
 }
 
 /* Media Queries for medium devices */
@@ -39,10 +37,22 @@
   .home-content{
     width: 90%;
   }
+  .buttons-container {
+    margin: 1.5rem auto 0;
+  }
+  .buttons-container a{
+    font-size: 1.5rem;
+  }
 } 
 /* Media Queries for small devices */
 @media screen and (max-width: 650px) {
   .home-content{
     width: 95%;
+  }
+  .buttons-container {
+    margin: 1rem auto 0;
+  }
+  .buttons-container a{
+    font-size: 1rem;
   }
 }
