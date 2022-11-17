@@ -1,22 +1,15 @@
 import './About.css'
 import gsap from 'gsap'
-import {useLayoutEffect, useRef, useEffect} from 'react'
+import {useLayoutEffect, useRef} from 'react'
 
 const About = () => {
     const ref = useRef();
-
-    // function makeLight(i) {
-    //     let span = document.createElement("span")
-    //     if (i < blurCount) {
-    //         span.classList.add("blur")
-    //     }
-    //     stage.appendChild(span)
-    // }
-
+    let midWidth = window.screen.width / 2
+    let midHeight = window.screen.height / 2
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            const count = 50
-            const blurCount = 10
+            const count = 20
+            const blurCount = 20
             const stage = document.querySelector(".stage")
 
             function makeLight(i) {
@@ -25,10 +18,10 @@ const About = () => {
                     span.classList.add("blur")
                 }
                 stage.appendChild(span)
+                gsap.from(span, {xPercent: 50, yPercent: 50, duration: 5})
                 gsap.set(span, {left: gsap.utils.random(0, stage.offsetWidth), 
                                 top: gsap.utils.random(0, stage.offsetHeight),
-                                scale: gsap.utils.random(0.8, 1.2, 0.1),
-                                opactiy: 0
+                                scale: gsap.utils.random(0, 0.01, 0.01),
                 })
                 let tl = gsap.timeline({
                     paused: true,
@@ -37,38 +30,17 @@ const About = () => {
                         makeLight(i)
                     }
                 })
-                if (i < blurCount) {
-                    tl.to(span, {
-                        opacity: gsap.utils.random(0.1, 0.2),
-                        duration: 0.3
-                    })
-                    tl.to(span, {
-                        x: gsap.utils.random(-100, 100),
-                        y: gsap.utils.random(-100, 100),
-                        duration: gsap.utils.random(5, 7, 0.2),
-                        ease: 'none'
-                    }, -3)
-                    tl.to(span, {
-                        opactiy: 0,
-                        duration: 0.3
-                    }, ">-.3")
-                } else {
-                    tl.to(span, {
-                        opacity: gsap.utils.random(0.5, 0.8),
-                        duration: 0.3
-                    })
-                    tl.to(span, {
-                        x: gsap.utils.random(-40, 40),
-                        y: gsap.utils.random(-40, 40),
-                        duration: gsap.utils.random(5, 7, 0.2),
-                        ease: 'none'
-                    }, -3)
-                    tl.to(span, {
-                        opactiy: 0,
-                        duration: 0.3
-                    }, ">-.3")
-                }
-                
+                tl.from(span, {
+                    x: gsap.utils.random(-10, 10),
+                    y: gsap.utils.random(-10, 10),
+                })
+                tl.to(span, {
+                    x: gsap.utils.random(-100, 100),
+                    y: gsap.utils.random(-100, 100),
+                    autoAlpha: gsap.utils.random(0.6, 1),
+                    duration: gsap.utils.random(5, 20, 1),
+                    ease: 'none'
+                }, 1)    
                 tl.play()
             }
 
