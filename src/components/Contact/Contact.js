@@ -40,9 +40,6 @@ import emailjs from '@emailjs/browser';
           you email. I really appreciate you viewing my website and I'll
           appreciate you even more if you send me a message below.
         </p>
-        <p>P.S. There's an easter egg on this website and the only way you 
-          can view it is by sending a message below.
-        </p>
       </div>
       <div className='contact-container'>
         <div className='contact-options'>

@@ -3,17 +3,14 @@ import { gsap } from 'gsap'
 import {useLayoutEffect, useRef} from 'react'
 
 const AnimateName = ({ name, title }) => {
-
     const ref = useRef();
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.to('.letter-animation', { y: 0, stagger: 0.4, delay: 0.5, duration: 0.1 })
-            gsap.to('.title-animation', { y: 0, stagger: 0.22, delay: 0.5, duration: 0.05 })
+            gsap.to('.letter-animation', { y: 0, stagger: 0.2, delay: 0.05, duration: 0.1 })
+            gsap.to('.title-animation', { y: 0, stagger: 0.11, delay: 0.15, duration: 0.025 })
           }, ref); 
           return () => ctx.revert();
-    
     }, []);
-
   return (
     <div className="name-animation-container" ref={ref}>
       <div className="name-container">

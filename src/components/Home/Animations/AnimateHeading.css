@@ -49,4 +49,7 @@
     .NA-6, .TA-3, .TA-9, .TA-13 {
         padding-right: 0.5rem;
     }
+    .name-animation.letter-animation.NA-7 {
+        display: block;
+    }
   }

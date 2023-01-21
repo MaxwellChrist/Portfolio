@@ -15,7 +15,7 @@ const Navigation = () => {
                         <Link id="projects" to="/projects">Projects</Link>
                         <Link id="contact" to="/contact">Contact</Link>
                     </div>
-                    <div className='logo navbar-sections'>
+                    <div className='logo'>
                         <Link to="/">
                             <img src={Logo} alt="Logo" />
                         </Link>
