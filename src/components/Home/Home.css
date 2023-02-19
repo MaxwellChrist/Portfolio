@@ -1,16 +1,13 @@
-html, body, #root, .app {
-  height:100%;
-  width:100%;
-  overflow:hidden;
-}
-
-.home-container::before{
+.home-container::before, .home-container::after {
   content:'';
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   height:100%;
   width:100%;
+}
+
+.home-container::before {
   background-image: url("../../assets/images/Home.jpg");
   background-position: center center;
   background-size: cover;
@@ -20,23 +17,18 @@ html, body, #root, .app {
   opacity:0.75;
 }
 
-.home-container:after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  height:100%;
-  width:100%;
+.home-container::after {
   background:black;
   z-index:-2;
 }
 
-
 .home-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   max-height:100vh;
+  position:fixed;
+  top:0;
 }
 
 .home-content {

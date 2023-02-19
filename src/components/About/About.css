@@ -1,14 +1,38 @@
+.about-content {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
 .about-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+}
+
+.about-container::before, .about-container::after {
+  content:'';
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+}
+
+.about-container::before {
   background-image: url("../../assets/images/About.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: scroll;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: -1;
+  opacity:0.75;
+}
+
+
+.about-container::after{
+  background:black;
+  z-index:-2;
 }

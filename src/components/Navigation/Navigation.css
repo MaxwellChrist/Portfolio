@@ -1,5 +1,11 @@
 /* Global styling */
 
+html, body, #root, .app {
+  height:100%;
+  width:100%;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -149,7 +155,6 @@ a:hover {
 
 /* Experimental styles for hamburger menu */
 .slider {
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,6 +162,8 @@ a:hover {
   width: 100%;
   padding-top: 20px;
   background: transparent;
+  position:relative;
+  z-index:5;
 }
 
 .menu-icon, .closed, #logo{
