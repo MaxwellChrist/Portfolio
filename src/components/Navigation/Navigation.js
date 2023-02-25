@@ -9,6 +9,10 @@ const Navigation = () => {
     const [active, setActive] = useState(false);
     const [width, setWidth] = useState(window.innerWidth)
 
+    const toggleMobileViewLogo = {
+        display: !active && width <= 650 ? 'block' : 'none'
+    }
+
     const handleResize = () => {
         setWidth(window.innerWidth);
       }
@@ -32,8 +36,8 @@ const Navigation = () => {
                             <li><Link id="projects" to="/projects">Projects</Link></li>
                             <li><Link id="contact" to="/contact">Contact</Link></li>
                         </div>
-                        <div className="logo-container">
-                            <li><Link to="/"><img id="logo" src={Logo} alt="logo" /></Link></li>
+                        <div className="logo-container" style={toggleMobileViewLogo}>
+                            <img id="logo" src={Logo} alt="logo" />
                         </div>
                     </ul>
                 </nav>
