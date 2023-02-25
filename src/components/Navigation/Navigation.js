@@ -9,8 +9,11 @@ const Navigation = () => {
     const [active, setActive] = useState(false);
     const [width, setWidth] = useState(window.innerWidth)
 
-    const toggleMobileViewLogo = {
+    const toggleMobileViewActive = {
         display: !active && width <= 650 ? 'block' : 'none'
+    }
+    const toggleMobileViewInactive = {
+        display: active && width <= 650 ? 'block' : 'none'
     }
 
     const handleResize = () => {
@@ -18,7 +21,6 @@ const Navigation = () => {
       }
     useEffect(() => {
         window.addEventListener('resize', handleResize, false);
-        console.log(width)
     }, [width])
 
     return (
@@ -26,8 +28,8 @@ const Navigation = () => {
             <header>
                 <nav className={active ? "slider active" : "slider"}>
                     <div className="menu-icon" >
-                        <GiHamburgerMenu className='menu' display={!active && width <= 650 ? 'block' : 'none'} onClick={() => setActive(!active)}/>
-                        <GrClose className="close" display={active && width <= 650 ? 'block' : 'none'} onClick={() => setActive(!active)}/>
+                        <GiHamburgerMenu className='menu' style={toggleMobileViewActive} onClick={() => setActive(!active)}/>
+                        <GrClose className="close" style={toggleMobileViewInactive} onClick={() => setActive(!active)}/>
                     </div>
                     <ul>
                         <div className="main-nav">
@@ -36,7 +38,7 @@ const Navigation = () => {
                             <li><Link id="projects" to="/projects">Projects</Link></li>
                             <li><Link id="contact" to="/contact">Contact</Link></li>
                         </div>
-                        <div className="logo-container" style={toggleMobileViewLogo}>
+                        <div className="logo-container" style={toggleMobileViewActive}>
                             <img id="logo" src={Logo} alt="logo" />
                         </div>
                     </ul>

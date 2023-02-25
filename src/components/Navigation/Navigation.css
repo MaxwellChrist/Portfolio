@@ -231,7 +231,7 @@ a:hover {
 
   /* Inactive mobile dropdown */
 
-  /* .slider.active ul{
+  .slider.active ul{
     flex-direction: column;
   }
   
@@ -244,5 +244,5 @@ a:hover {
     color: green;
     font-family: var(--secondary-font);
     font-size: 2rem;
-  } */
+  }
 }
