@@ -13,7 +13,6 @@ import emailjs from '@emailjs/browser';
         const SI = process.env.REACT_APP_SERVICE_ID
         const TI = process.env.REACT_APP_TEMPLATE_ID
         const PK = process.env.REACT_APP_PUBLIC_KEY
-        console.log(SI, TI, PK)
         emailjs
           .sendForm(SI, TI, form.current, PK)
           .then(
