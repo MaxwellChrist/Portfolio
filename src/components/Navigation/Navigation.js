@@ -10,10 +10,13 @@ const Navigation = () => {
     const [width, setWidth] = useState(window.innerWidth)
 
     const toggleMobileViewActive = {
-        display: !active && width <= 650 ? 'block' : 'none'
+        display: !active && width <= 650 ? 'block' : 'none',
     }
     const toggleMobileViewInactive = {
-        display: active && width <= 650 ? 'block' : 'none'
+        display: active && width <= 650 ? 'block' : 'none',
+    }
+    const toggleMobileViewInactiveNavbar = {
+        display: active || width > 650 ? 'flex' : 'none'
     }
 
     const handleResize = () => {
@@ -27,12 +30,12 @@ const Navigation = () => {
         <div className="app">
             <header>
                 <nav className={active ? "slider active" : "slider"}>
-                    <div className="menu-icon" >
+                    <div className="menu-icon" style={toggleMobileViewActive} >
                         <GiHamburgerMenu className='menu' style={toggleMobileViewActive} onClick={() => setActive(!active)}/>
-                        <GrClose className="close" style={toggleMobileViewInactive} onClick={() => setActive(!active)}/>
                     </div>
+                    <GrClose className={active && width <= 650 ? 'close' : ''} style={toggleMobileViewInactive} onClick={() => setActive(!active)}/>
                     <ul>
-                        <div className="main-nav">
+                        <div className="main-nav" style={toggleMobileViewInactiveNavbar}>
                             <li><Link id="home" to="/">Home</Link></li>
                             <li><Link id="about" to="/about">About</Link></li>
                             <li><Link id="projects" to="/projects">Projects</Link></li>
