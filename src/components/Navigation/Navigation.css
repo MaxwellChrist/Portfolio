@@ -77,83 +77,6 @@ a:hover {
   color: var(--primary-black);
 } 
 
-/* Media Queries for medium devices */
-@media screen and (max-width: 1024px) {
-  .container {
-      width: var(--container-width-md);
-  }
-} 
-/* Media Queries for small devices */
-@media screen and (max-width: 650px) {
-  .container {
-      width: var(--container-width-sm);
-  }
-}
-
-/* Styling for navigation component*/
-/* .main-container {
-  width: 100%;
-  height: 100vh;
-}
-nav {
-  position: fixed;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  top: 0;
-  width: 100%;
-  padding-top: 20px;
-  background: transparent;
-}
-
-.navbar-sections {
-  display: flex;
-  padding: 0 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  overflow: hidden;
-}
-
-.navbar-sections-mobile {
-display: none;
-}
-
-.logo {
-display: flex;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-family: var(--secondary-font);
-  font-size: 1.5rem;
-} 
-      
-a:hover {
-  color: var(--primary-white);
-}
-
-.logo img {
-  width: 50px;
-} 
-
-@media screen and (max-width: 600px) {
-  .navbar-sections {
-      display: none;
-  }
-
-  .navbar-sections-mobile {
-    display: flex;
-    padding: 0 10px;
-    justify-content: space-between;
-    gap: 20px;
-    overflow: hidden;
-  }
-}
-*/
-
-/* Experimental styles for hamburger menu */
 .slider {
   display: flex;
   justify-content: center;
@@ -166,15 +89,20 @@ a:hover {
   z-index:5;
 }
 
+.slider ul {
+  width: 100%;
+}
+
+
 .main-nav {
-  display: flex;
-  gap: 30px;
+  justify-content: center;
+  gap: 10%;
 }
 
 .slider ul li a {
   color: var(--primary-color);
   font-family: var(--secondary-font);
-  font-size: 2.5rem;
+  font-size: 3rem;
   overflow: hidden;
 }
 
@@ -184,12 +112,16 @@ a:hover {
 
 /* Medium devices */
 @media screen and (max-width: 1024px) {
+  .container {
+      width: var(--container-width-md);
+  }
+
   .slider {
     padding-top: 25px;
   }
 
   .main-nav {
-    gap: 22.5px;
+    gap: 5%;
   }
 
   .slider ul li a {
@@ -199,12 +131,20 @@ a:hover {
 
 /* Small devices */
 @media screen and (max-width: 650px) {
+  .container {
+    width: var(--container-width-sm);
+  }
   /* Inactive mobile dropdown */
   .slider {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 25px;
+    width: auto;
+  }
+
+  .slider ul {
+    width: auto;
   }
 
   .slider.active {

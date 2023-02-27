@@ -10,13 +10,13 @@ const Navigation = () => {
     const [width, setWidth] = useState(window.innerWidth)
 
     const toggleMobileViewActive = {
-        display: !active && width <= 650 ? 'block' : 'none',
+        display: !active && width < 650 ? 'block' : 'none',
     }
     const toggleMobileViewInactive = {
-        display: active && width <= 650 ? 'block' : 'none',
+        display: active && width < 650 ? 'block' : 'none',
     }
     const toggleMobileViewInactiveNavbar = {
-        display: active || width > 650 ? 'flex' : 'none'
+        display: active || width >= 650 ? 'flex' : 'none'
     }
 
     const handleResize = () => {
@@ -24,7 +24,7 @@ const Navigation = () => {
       }
     useEffect(() => {
         window.addEventListener('resize', handleResize, false);
-        if (width > 650) setActive(false)
+        if (width > 650) setActive(false);
     }, [width])
 
     return (
