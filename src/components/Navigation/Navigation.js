@@ -37,10 +37,10 @@ const Navigation = () => {
                     <GrClose className={active && width <= 650 ? 'close' : ''} style={toggleMobileViewInactive} onClick={() => setActive(!active)}/>
                     <ul>
                         <div className="main-nav" style={toggleMobileViewInactiveNavbar}>
-                            <li><Link id="home" to="/">Home</Link></li>
-                            <li><Link id="about" to="/about">About</Link></li>
-                            <li><Link id="projects" to="/projects">Projects</Link></li>
-                            <li><Link id="contact" to="/contact">Contact</Link></li>
+                            <li><Link id="home" to="/" onClick={() => setActive(!active)}>Home</Link></li>
+                            <li><Link id="about" to="/about" onClick={() => setActive(!active)}>About</Link></li>
+                            <li><Link id="projects" to="/projects" onClick={() => setActive(!active)}>Projects</Link></li>
+                            <li><Link id="contact" to="/contact" onClick={() => setActive(!active)}>Contact</Link></li>
                         </div>
                         <div className="logo-container" style={toggleMobileViewActive}>
                             <img id="logo" src={Logo} alt="logo" />

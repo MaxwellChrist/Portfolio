@@ -35,9 +35,7 @@ import emailjs from '@emailjs/browser';
           connect on LinkedIn if we're not already! Found a bug in my website and 
           want to show me? Tell me all about it! Anything you want to say 
           at all will be sent to me through email and I will try to respond
-          to every comment. The only guarantee I'll give is that the 
-          follow up email I'll message back with will not be a generic thank 
-          you email. I really appreciate you viewing my website and I'll
+          to every comment. I really appreciate you viewing my website and I'll
           appreciate you even more if you send me a message below.
         </p>
       </div>
