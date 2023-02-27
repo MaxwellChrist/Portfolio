@@ -24,6 +24,7 @@ const Navigation = () => {
       }
     useEffect(() => {
         window.addEventListener('resize', handleResize, false);
+        if (width > 650) setActive(false)
     }, [width])
 
     return (
