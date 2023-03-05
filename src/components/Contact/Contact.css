@@ -100,6 +100,11 @@ form {
     margin-bottom:2em;
 }
 
+input, textarea, input::placeholder, textarea::placeholder, .btn-primary {
+    color: var(--primary-white);
+    font-family: var(--secondary-font);
+}
+
 input, .btn-primary, textarea {
     width: 100%;
     padding: 1.5rem;
@@ -108,10 +113,6 @@ input, .btn-primary, textarea {
     transition: var(--transition);
 }
 
-input, textarea, input::placeholder, textarea::placeholder {
-    color: var(--primary-white);
-    font-family: var(--secondary-font);
-}
 
 input:focus, textarea:focus, input:active, textarea:active,
 .contact-option:hover, input:active, textarea:hover {
