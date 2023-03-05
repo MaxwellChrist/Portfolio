@@ -78,7 +78,7 @@
   }
   
   .about-content-text p{
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: initial;
   }
 }
@@ -87,7 +87,7 @@
     flex-direction: column-reverse;
   }
   .about-content-text h1{
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .about-content-text p{

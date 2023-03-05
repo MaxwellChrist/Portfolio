@@ -196,4 +196,8 @@ a:hover {
     color: var(--secondary-color);
     font-size: 4rem;
   }
+
+  .slider ul li a:hover {
+    color: var(--primary-black);
+  }
 }
