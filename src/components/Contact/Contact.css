@@ -45,6 +45,11 @@
     text-shadow: -1px 0 var(--primary-black), 0 1px var(--primary-black), 1px 0 var(--primary-black), 0 -1px var(--primary-black);
 }
 
+.contact h1, .contact p {
+
+    text-align: center;
+}
+
 .contact-container {
     width: var(--container-width-lg);
     margin: 0 auto;
