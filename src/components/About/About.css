@@ -51,9 +51,57 @@
 
 .about-content-text h1{
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .about-content-text p{
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+/* Media Queries for very large devices */
+@media screen and (max-width: 1650px) {
+  .about-content-text h1{
+    font-size: 2.5rem;
+  }
+  
+  .about-content-text p{
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Media Queries for medium devices */
+@media screen and (max-width: 1024px) {
+  .about-content-text h1{
+    font-size: 2.5rem;
+  }
+  
+  .about-content-text p{
+    font-size: 1rem;
+    line-height: initial;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about-content {
+    flex-direction: column-reverse;
+  }
+  .about-content-text h1{
+    font-size: 2rem;
+  }
+  
+  .about-content-text p{
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+}
+/* Media Queries for small devices */
+@media screen and (max-width: 500px) {
+  .about-content-text h1{
+    font-size: 2rem;
+  }
+  
+  .about-content-text p{
+    font-size: 0.75rem;
+  }
 }
