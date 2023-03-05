@@ -1,13 +1,3 @@
-.about-content {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-}
-
 .about-container {
   width: 100%;
 }
@@ -22,7 +12,7 @@
 }
 
 .about-container::before {
-  background-image: url("../../assets/images/About.jpg");
+  background-image: url("../../assets/images/Mac.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,8 +21,39 @@
   opacity:0.75;
 }
 
-
 .about-container::after{
   background:black;
   z-index:-2;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about-content-image, .about-content-text {
+  flex: 1; 
+  padding: 0 50px;
+}
+
+.about-content-image img {
+  max-width:100%;
+  border-radius: 50%;
+  border:  5px solid var(--primary-color) ;
+}
+
+.about-content-text {
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+.about-content-text h1{
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.about-content-text p{
+  font-size: 1.5rem;
 }
