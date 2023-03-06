@@ -10,13 +10,13 @@ const data = [
   {
     id: 1,
     image: Img1,
-    title: "React Grid",
+    title: "LeadTech Games",
     github: 'https://github.com/MaxwellChrist/React-Grid'
   },
   {
     id: 2,
     image: Img2,
-    title: "Authentication and authorization using JSON Web tokens (JWT)",
+    title: "SecureTech Solutions",
     github: 'https://github.com/MaxwellChrist/Authentication-and-authorization-using-JSON-Web-Tokens-JWT'
   },
   {
