@@ -1,0 +1,37 @@
+svg {
+    display: none;
+}
+
+.linkObject {
+    border: 5px solid orange;
+
+    position: relative;
+
+}
+
+.linkObject h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.linkObject svg:first-child {
+    left: 0;
+}
+
+.linkObject svg:last-child {
+    right: 0;
+}
+
+.linkObject svg {
+    position: absolute;
+    transform: scale(0.1);
+    transform-origin: top;
+    opacity: 0;
+    top: 1em;
+    transition: 0.25s linear all;
+}
+
+.linkObject:hover svg {
+    opacity: 1;
+    transition: 0.25s linear all;
+}

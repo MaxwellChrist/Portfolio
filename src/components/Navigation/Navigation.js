@@ -28,6 +28,13 @@ const Navigation = () => {
     setActive(!active);
   };
 
+  const handleAnimation = (e) => {
+    console.log(e);
+    if (active && width < 650) {
+
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("resize", handleResize, false);
     if (width > 650) setActive(false);
@@ -79,6 +86,7 @@ const Navigation = () => {
                   className="link"
                   to="/"
                   onClick={handleActive}
+                  onMouseEnter={handleAnimation}
                 >
                   Home
                 </Link>
