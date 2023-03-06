@@ -24,6 +24,19 @@ const Contact = () => {
     );
   };
 
+  function toggleEmail() {
+    window.location.assign("mailto:mhchrist22@gmail.com");
+  }
+
+  function toggleLinkedIn() {
+    window.location.href = 'https://www.linkedin.com/in/maxwellchrist/';
+  }
+
+  function toggleGithub() {
+    window.location.href = 'https://github.com/MaxwellChrist';
+  }
+
+
   return (
     <section className="contact">
       <div className="contact-intro">
@@ -37,41 +50,20 @@ const Contact = () => {
       </div>
       <div className="contact-container">
         <div className="contact-options">
-          <article className="contact-option">
+          <article className="contact-option" onClick={toggleEmail}>
             <MdOutlineMail className="contact-option-icon" />
             <h4>Email</h4>
-            <a
-              href="mailto:mhchrist22@gmail.com"
-              className="contact-option-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send a message
-            </a>
+            <p className="contact-option-link">Go to profile page</p>
           </article>
-          <article className="contact-option">
+          <article className="contact-option" onClick={toggleLinkedIn}>
             <GrLinkedin className="contact-option-icon" />
             <h4>LinkedIn</h4>
-            <a
-              href="https://www.linkedin.com/in/maxwellchrist/"
-              className="contact-option-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Go to profile page
-            </a>
+            <p className="contact-option-link">Go to profile page</p>
           </article>
-          <article className="contact-option">
+          <article className="contact-option" onClick={toggleGithub}>
             <GoMarkGithub className="contact-option-icon" />
             <h4>Github</h4>
-            <a
-              href="https://github.com/MaxwellChrist"
-              className="contact-option-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Go to profile page
-            </a>
+            <p className="contact-option-link">Go to profile page</p>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>

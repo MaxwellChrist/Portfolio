@@ -34,19 +34,18 @@
     padding: 0 25%;
 }
 
-.contact h1 {
+.contact-intro h1 {
     font-size: 4rem;
     padding-bottom: 10px;
 }
 
-.contact p {
+.contact-intro p {
     font-size: 1.5rem;
     padding-bottom: 2rem;
     text-shadow: -1px 0 var(--primary-black), 0 1px var(--primary-black), 1px 0 var(--primary-black), 0 -1px var(--primary-black);
 }
 
-.contact h1, .contact p {
-
+.contact-intro  {
     text-align: center;
 }
 
@@ -77,6 +76,10 @@
     align-items: center;
     line-height: 0;
     gap: 10px;
+}
+
+.contact-option:hover {
+    cursor: pointer;
 }
 
 .contact-option:hover, input:active, textarea:hover {
